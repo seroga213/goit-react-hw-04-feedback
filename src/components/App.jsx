@@ -1,6 +1,6 @@
 import React from "react";
 import { FeedbackOptions } from "../components/FeedbackOptions/FeedbackOptions";
-import { Title, Section} from './App.styled';
+import  Section  from './Section/Section' ;
 import { Statistics } from '../components/Statictics/Statistics';
 // import { StatisticsTitle, StatisticsCard } from '../components/Statictics/Statistics.styled';
 import { Notification } from 'components/Notification/Notification';
@@ -67,8 +67,8 @@ export const Feedback = () => {
                   addFeedback ={handleIncrement}
               ></FeedbackOptions>
           </Section>
-          <Section>
-                <Title>Statistics</Title>
+          <Section title = "Statistics">
+                {/* <Title>Statistics</Title> */}
                   {countTotalFeedback() === 0
                       ? <Notification message="There is no feedback"></Notification>
                       : <Statistics
